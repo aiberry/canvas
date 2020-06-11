@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "inspect": "vue-cli-service inspect",
+    "proj:start": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "test": "vue-cli-service test:unit",
+    "proj:lint": "yarn vue-cli-service lint && stylelint ."
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.5",
+    "element-ui": "^2.13.2",
+    "stylelint-config-sass-guidelines": "^7.0.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.2",
@@ -36,8 +40,19 @@
     "prettier": "^1.19.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "stylelint": "^13.6.0",
     "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11"
+  },
+  "prettier": {
+    "printWidth": 85,
+    "singleQuote": false,
+    "arrowParens": "always",
+    "tabWidth": 2,
+    "semi": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "endOfLine": "auto"
   },
   "eslintConfig": {
     "root": true,
